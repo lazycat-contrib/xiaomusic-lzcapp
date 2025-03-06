@@ -1,0 +1,22 @@
+lzc-sdk-version: "0.1"
+name: XiaoMusic
+package: com.liaobinbin.xiaomusic
+version: 0.3.75
+description: "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。 "
+homepage: https://github.com/hanxi/xiaomusic
+author: hanxi
+application:
+  subdomain: xiaomusic
+  background_task: false
+  multi_instance: true
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://xm.com.liaobinbin.xiaomusic.lzcapp:8090/
+services:
+  xm:
+    image: registry.lazycat.cloud/boiaoch/hanxi/xiaomusic:fd2aac622d1a0435
+    binds:
+      - /lzcapp/run/mnt/home/music:/app/music
+      - /lzcapp/var/xiaomusic:/app/conf

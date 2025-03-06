@@ -1,0 +1,40 @@
+{
+  "name": "XiaoMusic",
+  "package": "xiaomusic",
+  "description": "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。 ",
+  "homepage": "https://github.com/hanxi/xiaomusic",
+  "author": "hanxi",
+  "app_features": [
+    "multi_instance"
+  ],
+  "subdomain": "xiaomusic",
+  "version": "0.3.75",
+  "iconPath": "WX20250306-105402@2x.png",
+  "unsupported_platforms": [
+    "ios",
+    "android",
+    "linux",
+    "windows",
+    "macos",
+    "tvos"
+  ],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "xiaomusic_58090_8090": {
+      "use": true,
+      "type": "https",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_docker.hanxi.cc_hanxi_xiaomusic": {
+    "originalImage": "docker.hanxi.cc/hanxi/xiaomusic",
+    "pushTarget": "none"
+  },
+  "xiaomusic_volume_/app/music_action": "emptyDir",
+  "xiaomusic_volume_/app/music_location": "user_data",
+  "xiaomusic_volume_/app/music_subdir": "xiaomusic",
+  "xiaomusic_volume_/app/conf_action": "emptyDir",
+  "xiaomusic_volume_/app/conf_location": "user_data",
+  "xiaomusic_volume_/app/conf_subdir": "xiaomusic_config"
+}
