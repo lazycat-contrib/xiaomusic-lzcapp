@@ -1,0 +1,36 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/xiaomusic.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: xm
+build:
+  run_buildscript: false
+images:
+  - id: xm
+    target: service
+    service: xm
+    source: hanxi/xiaomusic
+    channel: stable
+    sort: semver
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    delivery:
+      mode: mirror
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: true
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: XiaoMusic
+    summary: "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。"

@@ -1,0 +1,14 @@
+package: com.liaobinbin.xiaomusic
+version: 0.3.75
+name: XiaoMusic
+description: "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。"
+min_os_version: "1.5.0"
+homepage: https://github.com/hanxi/xiaomusic
+author: hanxi
+locales:
+  zh:
+    description: "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。"
+    name: XiaoMusic
+  en:
+    description: "Play music on XiaoAi speakers; music is downloaded with yt-dlp."
+    name: XiaoMusic

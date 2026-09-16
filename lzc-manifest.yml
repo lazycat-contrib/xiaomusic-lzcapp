@@ -1,0 +1,17 @@
+application:
+  subdomain: xiaomusic
+  background_task: false
+  multi_instance: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://xm:8090/
+
+services:
+  xm:
+    # upstream: hanxi/xiaomusic:v0.3.75
+    image: docker.1ms.run/hanxi/xiaomusic:v0.3.75
+    binds:
+      - /lzcapp/run/mnt/home/music:/app/music
+      - /lzcapp/var/xiaomusic:/app/conf
