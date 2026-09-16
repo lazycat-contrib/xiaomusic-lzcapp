@@ -1,5 +1,5 @@
 package: com.liaobinbin.xiaomusic
-version: 0.3.75
+version: 0.6.1
 name: XiaoMusic
 description: "使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。"
 min_os_version: "1.5.0"

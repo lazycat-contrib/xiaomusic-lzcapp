@@ -7,11 +7,10 @@ application:
   upstreams:
     - location: /
       backend: http://xm:8090/
-
 services:
   xm:
-    # upstream: hanxi/xiaomusic:v0.3.75
-    image: docker.1ms.run/hanxi/xiaomusic:v0.3.75
+    # upstream: hanxi/xiaomusic:v0.6.1
+    image: docker.1ms.run/hanxi/xiaomusic:v0.6.1
     binds:
       - /lzcapp/run/mnt/home/music:/app/music
       - /lzcapp/var/xiaomusic:/app/conf
